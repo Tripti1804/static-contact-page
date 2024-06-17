@@ -31,7 +31,7 @@ export async function getStaticProps() {
       props: {
         weatherData
       },
-      revalidate: 3600 // Revalidate every hour
+      revalidate: 120 // Revalidate every hour
     };
   } catch (error) {
     console.error('Error fetching weather data:', error);
@@ -39,7 +39,7 @@ export async function getStaticProps() {
       props: {
         weatherData: null
       },
-      revalidate: 3600 // Still revalidate every hour even if there's an error
+      revalidate: 120 // Still revalidate every hour even if there's an error
     };
   }
 }
